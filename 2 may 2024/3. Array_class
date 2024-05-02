@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
-                                                          // https://bit.ly/DACMAR2024THR
+                                                      
 class Array{
-     {
+   enum  {
         maxsize = 100
     };
     int size;
