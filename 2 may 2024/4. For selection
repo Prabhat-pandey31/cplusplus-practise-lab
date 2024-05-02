@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class Example{
+	int dataOne, dataTwo,dataThree;
+public:
+	Example():dataOne(0), dataTwo(1), dataThree(2){
+		//dataOne = 0;
+		//dataTwo = 1;
+		//dataThree = 2;
+	}
+	Example(int x): dataOne(x), dataTwo(x+10), dataThree(x+20) {}
+	Example(int x, int y): dataOne(x), dataTwo(y), dataThree(x+y){}
+	Example(int x, int y,int z): dataOne(x), dataTwo(y), dataThree(z){}
+
+	void disp(){
+		cout<<"dataOne: "<<dataOne;
+		cout<<"\tdataTwo: "<<dataTwo;
+		cout<<"\tdataThree: "<<dataThree<<endl;
+	}
+};
+
+int main(){
+	Example one(100,200);
+	one.disp();
+}
