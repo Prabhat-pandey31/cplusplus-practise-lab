@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-// https://bit.ly/DACMAR2024THR
+                                                          // https://bit.ly/DACMAR2024THR
 class Array{
      {
         maxsize = 100
