@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+    
+   class example{
+       mutable int dataone;
+       int datatwo;
+       int datathree;
+        
+       public :
+       
+       example(){
+           dataone = 10;
+           datatwo = 20;
+           datathree = 30;
+       }
+       void disp()const;
+   };
+   
+   int main(){
+       example one;
+       one.disp();
+       const example two;
+       two.disp();
+   }
+   void example::disp()const{
+       dataone+=10;
+       cout<<dataone<<endl;
+       cout<<datatwo<<endl;
+       cout<<datathree<<endl;
+   }
