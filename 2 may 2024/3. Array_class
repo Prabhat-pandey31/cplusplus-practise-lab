@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class Array{
+     {
+        maxsize = 100
+    };
+    int size;
+    int arr[maxsize];
+    public :
+    Array(int s = 10) : size(s){
+        cout<<"enter first elements"<<endl;
+        cin>>arr[0];
+        if(size> maxsize)
+        size=maxsize;
+        for(int i =1;i<size; i++){
+            arr[i] = arr[0]+ i;
+        }
+        
+    }
+    void disp(){
+        for(int i=0;i<size;i++){
+            cout<<arr[i]<<" ";
+        }
+    }
+} ;
+
+int main(){
+    Array obj;
+    obj.disp();
+  /*  Array obj2;
+    obj2.disp(); */
+}
