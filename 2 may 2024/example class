@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class example{
+    const int dataone;
+    int datatwo;
+    int datathree;
+    public:
+    example() : dataone(30)
+    {  
+        datatwo = 40;
+        datathree = 900;
+        
+    }
+    void disp(){
+        cout<<dataone<<endl;
+        cout<<datatwo<<endl;
+        cout<<datathree<<endl;
+    }
+};
+
+int main()
+{
+    example hero;
+    hero.disp();
+    
+}
