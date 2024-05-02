@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -20,9 +21,6 @@ class example{
 };
 
 int main()
-{
-    example hero;
-    hero.disp();
     
     const example villian;
     villian.disp();
