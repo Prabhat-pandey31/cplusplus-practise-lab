@@ -5,7 +5,9 @@ class example{
     int dataone;
     int datatwo;
     int datathree;
+//                                              ----------------------- access specifiers ------------------------------------------------------
     public:
+  //                           ------------- constructor ------------------------------
     example() 
     {   dataone = 10;
         datatwo = 40;
