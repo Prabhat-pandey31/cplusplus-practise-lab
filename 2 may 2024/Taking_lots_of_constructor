@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+    
+   class example{
+       int dataone;
+       int datatwo;
+       int datathree;
+       
+       public :
+       
+       example():dataone(0), datatwo(1),datathree(2)
+       {}
+       example(int x): dataone(x), datatwo(x+10), datathree(x+20) {}
+	  example(int x, int y): dataone(x), datatwo(y), datathree(x+y){}
+	  example(int x, int y,int z): dataone(x), datatwo(y), datathree(z){}
+       
+       void disp(){
+           cout<<dataone<<endl;
+           cout<<datatwo<<endl;
+           cout<<datathree<<endl;
+             }
+       
+   };
+   
+   int main(){
+       example one (100,200);
+       one.disp();
+   }
