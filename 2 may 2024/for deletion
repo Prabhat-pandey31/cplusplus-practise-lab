@@ -1,0 +1,36 @@
+include <iostream>
+using namespace std;
+
+class Array{
+	int size;
+	int *arr; //pointer as data member
+public:
+	Array(int sz=10): size(sz){
+		arr = new int[size]; //alocates memory
+		cout<<"Enter first element: ";
+		cin>>arr[0];
+		for (int i = 1; i < size; ++i)
+			arr[i] = arr[0] + i;
+	}
+
+	void disp(){
+		cout<<"Arr: ";
+		for (int i = 0; i < size;++i)
+			cout<<arr[i]<<" ";
+		cout<<endl;
+	}
+	~Array(){
+		if (size > 0)
+			delete []arr;//frees the memory
+	}
+};
+
+int main(){
+	Array obj=20;
+	obj.disp();
+	{
+		Array localObj=obj;
+		localObj.disp()	;
+	}
+	obj.disp();
+}
