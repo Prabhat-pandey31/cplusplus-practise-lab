@@ -27,7 +27,7 @@ int main()
     const example villian;
     villian.disp();
 }
-
+//                                            ----------- member function ---------------------
 void example:: disp(){
     cout<<dataone<<endl;
     cout<<datatwo<<endl;
