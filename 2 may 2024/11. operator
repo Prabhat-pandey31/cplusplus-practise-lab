@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Test{
+	int data;
+public:
+	Test(int data=0){
+		this->data = data;
+	}
+	Test operator-(){
+		return Test(-data);
+	}
+	Test operator++(int){ //postfix
+		return Test(data++);
+	}
+	Test& operator++(){ //prefix
+		++data;
+		return *this;
+	}
+	void disp(){
+		cout<<"Data: "<<data<<endl;
+	}
+};
+
+int main(){
+	Test a = 10;
+	a.disp();
+	Test b = -a; //Test b = a.operator-();
+	a.disp();
+	b.disp();
+	Test c = a++; // Test c = a.operator++(0);
+	a.disp();
+	c.disp();
+	Test d = ++a; //Test d = a.operator++();
+	a.disp();
+	d.disp();
+}
