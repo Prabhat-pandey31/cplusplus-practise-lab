@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class b;
+class a{
+    int dataone;
+    int datatwo;
+    a(int x=0):dataone(x),datatwo(x+10){}
+        void fun(){
+        cout<<dataone<<endl;
+        }
+       void fun1(){
+            cout<<datatwo<<endl;
+        }
+       void fun2(){
+            cout<<endl;
+        }
+        friend class b;
+    };
+    
+
+class b{
+    a obj;
+    public:
+    b(int m=1): obj(m) {}
+       void disp(){
+          obj.fun();
+           obj.fun1();
+           obj.fun2();
+           
+       } 
+    };
+    
+    
+    int main(){
+        b B =100;
+        B.disp();
+    }
