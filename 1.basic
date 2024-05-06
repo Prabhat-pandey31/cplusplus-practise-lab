@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number,bitpos;
+    cin>>number;
+    cin>>bitpos;
+    number = number ^ (1<<bitpos);
+  // cout<<number<<endl;
+    cout<<bitpos<<":";
+    cout<<number<<endl;
+}
