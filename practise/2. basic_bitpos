@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number,bitpos;
+    cin>>number;
+    cin>>bitpos;
+    int nibble = bitpos/4;
+    int mask =15<<(nibble*4);
+    number = number^mask;
+    cout<<number; 
+    
+    
+}
