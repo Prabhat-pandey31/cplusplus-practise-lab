@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+
+int getdayofmonth(int day,int month,int year){
+    if(month<3){
+        month = month+12;
+        year--;
+    }
+    int century =year/100;
+    year %=100;
+    int dayweek =(day+(13*(month+1)/5)+year+(year/4)+(century/4)+5*century)%7;
+        return (dayweek+5)%7;
+}
+
+int main()
+{
+       int dd,mm,yy;
+    cout << "Enter Date, Month and Year : ";
+    cin >> dd >> mm >> yy;
+    int dayOfWeek = getdayofmonth(dd,mm,yy);
+    string days[] = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};    
+    cout << "The day of the week is : "<< days[dayOfWeek] << endl;
+    return 0;
+
+}
